@@ -1,0 +1,1472 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wk4ify');
+  src:  url('fonts/icomoon.eot?wk4ify#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wk4ify') format('truetype'),
+    url('fonts/icomoon.woff?wk4ify') format('woff'),
+    url('fonts/icomoon.svg?wk4ify#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bolt:before {
+  content: "\f0e7";
+}
+.icon-flash:before {
+  content: "\f0e7";
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header{
+  position: relative;
+  padding: 20px 0;
+  background-color: #EEEFF1;
+}
+
+.header-wrap{
+  display: flex;
+  align-items: center;
+}
+
+.header-wrap .logo img{
+  height: 60px;
+  width: 96px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.hidden{
+  position: absolute;
+  left: -9999999px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  width: 26px;
+  height: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+#burger:checked ~ .nav-list {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+#burger:checked + .burger::before {
+  transition: transform 0.3s ease-in-out;
+  top: 9px;
+  transform: rotate(45deg);
+}
+#burger:checked + .burger span {
+  opacity: 0;
+  visibility: hidden;
+}
+#burger:checked + .burger::after {
+  transition: transform 0.3s ease-in-out;
+  bottom: 5px;
+  transform: rotate(-45deg);
+}
+.burger::before,
+.burger span,
+.burger::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black;
+}
+.burger::before,
+.burger::after {
+  content: "";
+}
+.burger::before {
+  top: 0;
+}
+.burger span {
+  top: 7px;
+}
+.burger::after {
+  bottom: 0;
+}
+
+.nav-list{
+
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #fff;
+  padding: 20px 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-list li{
+  padding-bottom: 15px;
+}
+
+.nav-list a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list a:hover{
+  color: #34547A;
+  transition: all .2s ease-in-out;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.section-banner {
+  background: #EEEFF1;
+  padding:105px 0 146px;
+}
+
+.banner-row {
+  display: flex;
+  align-items: center;
+}
+
+.banner-col {
+  width: 50%;
+}
+
+.banner-col .title {
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.65;
+  margin:0 auto 42px;
+}
+
+.banner-col p{
+  color: #727272;
+  font-size: 16px;
+  line-height: 1.62;
+  margin-bottom: 85px;
+}
+.banner-col .button{
+  padding: 25px 42px;
+  background: #34547A;
+  max-width: 225px;
+  height: 65px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.1em;
+}
+
+.banner-col .button:hover {
+  opacity: .3;
+  transition: all .3s ease-in-out;
+}
+
+.about-me {
+  padding: 120px 0 100px;
+}
+
+.about-me-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-me-header {
+  width: 100%;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-align: center;
+  color: #000000;
+}
+
+.about-me-description {
+  width: 540px;
+  font-size: 16px;
+  line-height: 1.15;
+  text-align: center;
+  color: #727272;
+}
+
+.section-prod {
+  background: #34547a;
+  color: #fff;
+  padding: 100px 0 48px;
+}
+.prod-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -26px;
+}
+.prod-item {
+  display: flex;
+  align-items: center;
+  /* max-width: 16.666%; */
+  padding: 0 26px 52px;
+}
+.prod-icon {
+  margin-right: 20px;
+}
+.prod-text {
+  max-width: 71px;
+}
+
+.prod-item .title {
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.section-skill {
+  padding: 101px 0;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -75px;
+}
+
+.skill-col {
+  width: 50%;
+  padding: 0 75px 30px;
+}
+.skill-header .title {
+  margin: 0 0 50px;
+  font-size: 32px;
+  line-height: 1.17;
+  font-weight: 500;
+}
+
+.skill-item{
+  margin-bottom: 30px;
+}
+
+.skill-name {
+  color: #727272;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.skill-loader {
+  position: relative;
+  width: 100%;
+  background: #c4c4c4;
+  height: 4px;
+}
+
+.skill-load {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #355472;
+}
+
+
+.work{
+  background: #EEEFF1;
+  padding: 68px 0 100px;
+
+}
+
+.how-i-work{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-i-work-header{
+  width: 100%;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.how-i-work-description{
+  width: 540px;
+  font-size: 16px;
+  line-height: 1.63 ;
+  text-align: center;
+  color: #727272;
+  padding-bottom: 41px;
+}
+
+.how-i-work-video{
+  height:600px;
+}
+
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  display: block;
+  width: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 25%;
+  position: relative;
+}
+
+.img-item:hover::before,
+.img-item:hover::after {
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.img-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(52, 84, 122, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.img-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: url(img/view.png);
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 57px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.microsoft {
+  background: #fff;
+  padding: 72px 0 50px;
+}
+.microsoft-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 -15px; */
+}
+.microsoft-item {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  padding: 0 15px 52px;
+}
+
+.want {
+  background:#EEEFF1;
+  padding: 68px 0 100px;
+
+}
+
+/* .want-me{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.want-me-header{
+  width: 100%;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.want-me-description{
+  width: 540px;
+  max-width: 100%;
+  padding-bottom: 50px;
+  font-size: 16px;
+  line-height: 1.15;
+  text-align: center;
+  color: #3f2222;
+}
+
+.want-me-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  width: 540px;
+}
+.want-me-form .name{
+  width: 255px;
+  max-width: 50%;
+  border: none;
+  height: 50px;
+  margin: 0 15px 20px 0;
+  padding-left: 20px;
+}
+.want-me-form .mail{
+  width: 255px;
+  max-width: 50%;
+  height: 50px;
+  border: none;
+  margin: 0px 0px 20px 15px;
+  padding-left: 20px;
+}
+.want-me-form .msg{
+  resize: none;
+  border: none;
+  margin-bottom: 50px;
+  padding: 17px 0 0 20px;
+  width: 100%;
+  height: 175px;
+} 
+
+.want-me-form .button{
+  padding: 20px 19px;
+  background: #34547A;
+  border: none;
+  width: 190px;
+  height: 55px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  line-height: 1.64;
+  letter-spacing: 0.15em;
+}
+.want-me-form .button:hover {
+  opacity: .3;
+  transition: all .3s ease-in-out;
+}  */
+.footer{
+  background: #34547A;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-list .name-rights .name{
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.19;
+  margin-bottom: 20px;;
+}
+
+.footer-list .name-rights .rights{
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.61;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.footer-icons li{
+  list-style: none;
+  padding: 0;
+}
+.footer-icons a {
+  text-decoration: none;
+}
+.footer-icons i {
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+}
+
+.footer-icons li + li {
+  padding-left: 22px;
+}
+
+@media (min-width: 0px){
+
+.section-banner {
+  background: #EEEFF1;
+  padding:35px 0 48px;
+}
+
+.banner-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-col {
+  width: 100%;
+
+}
+
+.banner-col .title {
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.65;
+  margin: 20px auto;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.banner-col p{
+  color: #727272;
+  font-size: 16px;
+  line-height: 1.62;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+.banner-col .button{
+  background: #34547A;
+  width: 50%;
+  height: 65px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.1em;
+}
+
+
+.about-me {
+  padding: 10px 0 10px;
+}
+
+.about-me-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-me-header {
+  width: 100%;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-align: left;
+  color: #000000;
+}
+
+.about-me-description {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: justify;
+  color: #727272;
+}
+
+.section-prod {
+  background: #34547a;
+  color: #fff;
+  padding: 30px 0;
+}
+.prod-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.prod-item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* max-width: 16.666%; */
+  padding: 0 26px 52px;
+}
+.prod-icon {
+  margin-right: 20px;
+}
+
+.prod-item .title {
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.skill-col {
+  width: 100%;
+
+}
+.skill-header .title {
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.skill-name {
+  color: #727272;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.skill-loader {
+  position: relative;
+  width: 100%;
+  background: #c4c4c4;
+  height: 4px;
+}
+
+.work{
+  background: #EEEFF1;
+}
+
+.how-i-work{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.how-i-work-header{
+  width: 100%;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-align: left;
+  color: #000000;}
+
+.how-i-work-description{
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.63 ;
+  text-align: center;
+  color: #727272;
+  text-align: justify;
+}
+
+.how-i-work-video{
+  height: 200px;
+}
+
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  display: block;
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50%;
+  position: relative;
+}
+.img-item:nth-child(2n){
+  order:-1;
+}
+
+.microsoft-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.microsoft-item {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+
+.want-me{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.want-me-header{
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.want-me-description{
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.63 ;
+  text-align: justify;
+  color: #727272;
+  text-align: justify;
+}
+.want{
+  padding: 10px 0;
+}
+.want-me-form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.want-me-form .name{
+  width: 100%;
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.want-me-form .mail{
+  width: 100%;
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.want-me-form .msg{
+  resize: none;
+  border: none;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.want-me-form .button{
+  padding: 20px 19px;
+  background: #34547A;
+  border: none;
+  width: 50%;
+  height: 55px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  line-height: 1.64;
+  letter-spacing: 0.15em;
+}
+}
+@media (min-width: 768px){
+
+  .section-banner {
+    background: #EEEFF1;
+    padding:35px 0 48px;
+  }
+  
+  .banner-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .banner-col {
+    width: 100%;
+  }
+  
+  
+  .banner-col .title {
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 1.65;
+    margin: 20px auto;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .banner-col p{
+    color: #727272;
+    font-size: 24px;
+    line-height: 1.62;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+  .banner-col .button{
+    background: #34547A;
+    width: 40%;
+    height: 65px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.1em;
+  }
+  
+  
+  .about-me {
+    padding: 10px 0 10px;
+  }
+  
+  .about-me-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-me-header {
+    width: 100%;
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .about-me-description {
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.62;
+    text-align: justify;
+    color: #727272;
+  }
+  
+  .section-prod {
+    background: #34547a;
+    color: #fff;
+    padding: 30px 0;
+  }
+  .prod-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .prod-item {
+    max-width: 33%;
+    display: flex;
+    align-items: center;
+    padding: 0 26px 52px;
+  }
+  .prod-icon {
+    margin-right: 20px;
+  }
+  
+  .prod-item .title {
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+  
+  .skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .skill-col {
+    width: 100%;
+  
+  }
+  .skill-header .title {
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    text-align: left;
+  }
+  
+  .skill-name {
+    color: #727272;
+    display: block;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .skill-loader {
+    position: relative;
+    width: 100%;
+    background: #c4c4c4;
+    height: 10px;
+  }
+  
+  .work{
+    background: #EEEFF1;
+  }
+  
+  .how-i-work{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .how-i-work-header{
+    width: 100%;
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    text-align: left;
+    color: #000000;}
+  
+  .how-i-work-description{
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.63 ;
+    text-align: center;
+    color: #727272;
+    text-align: justify;
+  }
+  
+  .how-i-work-video{
+    height: 400px;
+  }
+  
+  .img-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .img-item {
+    display: block;
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50%;
+    position: relative;
+  }
+  .img-item:nth-child(2n){
+    order:-1;
+  }
+  
+  .microsoft-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .microsoft-item {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  }
+  
+  
+  .want-me{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .want-me-header{
+    font-weight: 500;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    text-align: left;
+  }
+  
+  .want-me-description{
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.63 ;
+    text-align: justify;
+    color: #727272;
+    text-align: justify;
+  }
+  .want{
+    padding: 10px 0;
+  }
+  .want-me-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .want-me-form .name{
+    width: 46%;
+    border: none;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .want-me-form .mail{
+    width: 46%;
+    border: none;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .want-me-form .msg{
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .want-me-form .button{
+    padding: 20px 19px;
+    background: #34547A;
+    border: none;
+    width: 50%;
+    height: 55px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    line-height: 1.64;
+    letter-spacing: 0.15em;
+  }
+}
+
+@media (min-width: 1024px){
+  .burger{
+      display: none;
+  }
+  
+  .nav-list{
+      display: flex;
+      align-items: center;
+      position: static;
+      background: transparent;
+      opacity: 1;
+      visibility: visible;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.1em;
+      ;
+  }
+  .nav-list li{
+      padding-bottom: 0;
+  }
+  .nav-list li + li{
+      padding-left: 42px;
+  }
+
+  .section-banner {
+    background: #EEEFF1;
+    padding:105px 0 146px;
+  }
+  
+  .banner-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner-col {
+    width: 50%;
+  }
+  
+  .banner-col .title {
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.65;
+    margin:0 auto 42px;
+  }
+  
+  .banner-col p{
+    color: #727272;
+    font-size: 16px;
+    line-height: 1.62;
+    margin-bottom: 85px;
+  }
+  .banner-col .button{
+    padding: 25px 42px;
+    background: #34547A;
+    max-width: 225px;
+    height: 65px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.1em;
+  }
+  
+  .banner-col .button:hover {
+    opacity: .3;
+    transition: all .3s ease-in-out;
+  }
+  
+  .about-me {
+    padding: 120px 0 100px;
+  }
+  
+  .about-me-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-me-header {
+    width: 100%;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.15;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .about-me-description {
+    width: 540px;
+    font-size: 16px;
+    line-height: 1.15;
+    text-align: center;
+    color: #727272;
+  }
+  
+  .section-prod {
+    background: #34547a;
+    color: #fff;
+    padding: 100px 0 48px;
+  }
+  .prod-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -26px;
+  }
+  .prod-item {
+    display: flex;
+    align-items: center;
+    max-width: 16.666%;
+    padding: 0 26px 52px;
+  }
+  .prod-icon {
+    margin-right: 20px;
+  }
+  .prod-text {
+    max-width: 71px;
+  }
+  
+  .prod-item .title {
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.1;
+    width: 50%;
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+  
+  .section-skill {
+    padding: 101px 0;
+  }
+  
+  .skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -75px;
+  }
+  
+  .skill-col {
+    width: 50%;
+    padding: 0 75px 30px;
+  }
+  .skill-header .title {
+    margin: 0 0 50px;
+    font-size: 32px;
+    line-height: 1.17;
+    font-weight: 500;
+  }
+  
+  .skill-item{
+    margin-bottom: 30px;
+  }
+  
+  .skill-name {
+    color: #727272;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .skill-loader {
+    position: relative;
+    width: 100%;
+    background: #c4c4c4;
+    height: 4px;
+  }
+  
+  .skill-load {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #355472;
+  }
+  
+  
+  .work{
+    background: #EEEFF1;
+    padding: 68px 0 100px;
+  
+  }
+  
+  .how-i-work{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .how-i-work-header{
+    width: 100%;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.15;
+    text-align: center;
+  }
+  
+  .how-i-work-description{
+    width: 540px;
+    font-size: 16px;
+    line-height: 1.63 ;
+    text-align: center;
+    color: #727272;
+    padding-bottom: 41px;
+  }
+  
+  .how-i-work-video{
+    height:600px;
+  }
+  
+  .img-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .img-item {
+    display: block;
+    width: 25%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 25%;
+    position: relative;
+  }
+  .img-item:nth-child(2n){
+    order:0;
+  }
+  
+  .img-item:hover::before,
+  .img-item:hover::after {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+  
+  }
+  
+  .img-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(52, 84, 122, 0.8);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .img-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url(img/view.png);
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 57px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .microsoft {
+    background: #fff;
+    padding: 72px 0 50px;
+  }
+  .microsoft-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+  .microsoft-item {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 0 15px 52px;
+  }
+  
+  .want {
+    background:#EEEFF1;
+    padding: 68px 0 100px;
+  
+  }
+  
+  .want-me{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .want-me-header{
+    width: 100%;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.15;
+    text-align: center;
+  }
+  
+  .want-me-description{
+    width: 540px;
+    max-width: 100%;
+    padding-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.15;
+    text-align: center;
+    color: #3f2222;
+  }
+  
+  .want-me-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: 540px;
+  }
+  .want-me-form .name{
+    width: 255px;
+    max-width: 50%;
+    border: none;
+    height: 50px;
+    margin: 0 15px 20px 0;
+    padding-left: 20px;
+  }
+  .want-me-form .mail{
+    width: 255px;
+    max-width: 50%;
+    height: 50px;
+    border: none;
+    margin: 0px 0px 20px 15px;
+    padding-left: 20px;
+  }
+  .want-me-form .msg{
+    resize: none;
+    border: none;
+    margin-bottom: 50px;
+    padding: 17px 0 0 20px;
+    width: 100%;
+    height: 175px;
+  } 
+  
+  .want-me-form .button{
+    padding: 20px 19px;
+    background: #34547A;
+    border: none;
+    width: 190px;
+    height: 55px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    line-height: 1.64;
+    letter-spacing: 0.15em;
+  }
+  .want-me-form .button:hover {
+    opacity: .3;
+    transition: all .3s ease-in-out;
+  } 
+
+}
